@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/plain/contrib/metatex
+# catalog-date 2007-01-09 22:36:10 +0100
+# catalog-license gpl
+# catalog-version 1.1
 Name:		texlive-metatex
 Version:	1.1
 Release:	1
@@ -50,6 +56,7 @@ runs of TeX and one of MetaFont are needed.
 %doc %{_texmfdistdir}/doc/plain/metatex/mtpaper/frame.tex
 %doc %{_texmfdistdir}/doc/plain/metatex/mtpaper/mtpaper.tex
 %doc %{_texmfdistdir}/doc/plain/metatex/mtpaper/shadow.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -60,3 +67,5 @@ runs of TeX and one of MetaFont are needed.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
