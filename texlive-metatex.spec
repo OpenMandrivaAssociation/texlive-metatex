@@ -6,7 +6,7 @@
 # catalog-version 1.1
 Name:		texlive-metatex
 Version:	1.1
-Release:	9
+Release:	10
 Summary:	Incorporate MetaFont pictures in TeX source
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/metatex
