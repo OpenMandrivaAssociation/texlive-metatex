@@ -1,18 +1,12 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/plain/contrib/metatex
-# catalog-date 2007-01-09 22:36:10 +0100
-# catalog-license gpl
-# catalog-version 1.1
 Name:		texlive-metatex
-Version:	1.1
-Release:	12
+Version:	15878
+Release:	1
 Summary:	Incorporate MetaFont pictures in TeX source
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/metatex
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metatex.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metatex.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metatex.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metatex.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ Only standard features of TeX and MetaFont are used, but two
 runs of TeX and one of MetaFont are needed.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -50,24 +44,10 @@ runs of TeX and one of MetaFont are needed.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.1-2
-+ Revision: 753929
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.1-1
-+ Revision: 719002
-- texlive-metatex
-- texlive-metatex
-- texlive-metatex
-- texlive-metatex
-
