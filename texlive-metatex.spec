@@ -1,6 +1,6 @@
 Name:		texlive-metatex
 Version:	15878
-Release:	1
+Release:	2
 Summary:	Incorporate MetaFont pictures in TeX source
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/metatex
