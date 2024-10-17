@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Incorporate MetaFont pictures in TeX source
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/plain/contrib/metatex
+URL:		https://www.ctan.org/tex-archive/macros/plain/contrib/metatex
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metatex.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metatex.doc.r%{version}.tar.xz
